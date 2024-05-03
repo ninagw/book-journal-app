@@ -1,4 +1,10 @@
-# New Next Project
+# Book Journal App
+
+Project loading...
+
+### Scribble
+<img width="600" alt="BookApp-Wireframe" src="https://github.com/ninagw/book-journal-app/assets/150810914/8cfa34fd-9115-4f2d-9b23-ffcff8b51341">
+
 
 ### Local Development
 
