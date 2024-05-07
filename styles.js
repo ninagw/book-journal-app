@@ -1,4 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({ subsets: ["latin"], weight: "100" });
 
 export default createGlobalStyle`
 :root{
@@ -19,6 +22,29 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: system-ui;
+    font-family: ${montserrat.style.fontFamily};
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+
+  header {
+    padding: 20px;
+    width: 100%;
+    // position: sticky;
+    // top: 0;
+    // z-index: 10;
+  }
+   
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 0;
   }
 `;
