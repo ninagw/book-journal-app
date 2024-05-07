@@ -4,26 +4,25 @@ import Image from "next/image";
 const StyledList = styled.ul`
   list-style: none;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin: 10px auto;
-  padding: 0 5px 40px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 `;
 
 export default function BookList({ books }) {
   return (
-    <ul>
+    <StyledList>
       {books?.map((book) => (
         <li key={book.id}>
           <Image
             alt={book.title}
-            height={50}
-            width={50}
+            height={100}
+            width={70}
             src={book.cover}
             book={book}
           />
         </li>
       ))}
-    </ul>
+    </StyledList>
   );
 }
