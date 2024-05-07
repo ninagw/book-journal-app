@@ -2,9 +2,10 @@ import styled from "styled-components";
 import Image from "next/image";
 
 const StyledList = styled.ul`
+  padding-inline-start: 0;
   list-style: none;
   display: flex;
-  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
 `;

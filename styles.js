@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { Montserrat } from "next/font/google";
 
-const montserrat = Montserrat({ subsets: ["latin"], weight: "100" });
+const montserrat = Montserrat({ subsets: ["latin"], weight: "700" });
 
 export default createGlobalStyle`
 :root{
@@ -28,7 +28,7 @@ export default createGlobalStyle`
   }
 
   header {
-    padding: 20px;
+    padding: 20px 0 10px 0;
     width: 100%;
     // position: sticky;
     // top: 0;
