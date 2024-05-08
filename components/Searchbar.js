@@ -11,6 +11,8 @@ const SearchInput = styled.input`
 `;
 
 export default function SearchBar({ setSearchTerm }) {
+  console.log(setSearchTerm);
+
   return (
     <SearchInput
       onChange={(event) => setSearchTerm(event.target.value.toLowerCase())}
