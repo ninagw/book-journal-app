@@ -1,9 +1,14 @@
 import styled from "styled-components";
 import { useState } from "react";
 import BookList from "@/components/BookList";
+import SearchBar from "@/components/Searchbar";
 
 export default function HomePage({ books }) {
   const [searchTerm, setSearchTerm] = useState("");
+
+  function handleSearchClick() {
+    books.filter((book) => book.includes(searchTerm));
+  }
 
   return (
     <>
@@ -11,11 +16,10 @@ export default function HomePage({ books }) {
         <h1>Book Hunting</h1>
       </header>
       <main>
-        <input
-          type="text"
-          name="search"
-          onChange={(event) => setSearchTerm(event.target.value)}
-        ></input>
+        <SearchBar setSearchTerm={setSearchTerm} />
+        {/* <button type="button" onClick={handleSearchClick}>
+          Enter
+        </button> */}
         <BookList books={books} />
       </main>
     </>

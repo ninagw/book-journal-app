@@ -28,7 +28,7 @@ export default createGlobalStyle`
   }
 
   header {
-    padding: 20px 0 10px 0;
+    padding: 20px 0 20px 0;
     width: 100%;
     // position: sticky;
     // top: 0;
