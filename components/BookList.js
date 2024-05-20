@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const StyledList = styled.ul`
   padding-inline-start: 0;
@@ -11,6 +12,9 @@ const StyledList = styled.ul`
 `;
 
 export default function BookList({ books }) {
+  const router = useRouter();
+  const { id } = router.query;
+
   return (
     <StyledList>
       {books?.map((book) => (
@@ -21,6 +25,9 @@ export default function BookList({ books }) {
             width={70}
             src={book.cover}
             book={book}
+            onClick={() => {
+              router.push(`/details/${id}`);
+            }}
           />
         </li>
       ))}

@@ -1,6 +1,7 @@
 import react, { useState } from "react";
 import BookList from "@/components/BookList";
 import SearchBar from "@/components/Searchbar";
+import bookDetailPage from "./details/[id]";
 
 export default function HomePage({ books }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -17,9 +18,9 @@ export default function HomePage({ books }) {
   //   setFilterModal(!filterModal);
   // }
 
-  // function handleSearchClick() {
-  //   books.filter((book) => book.includes(searchTerm));
-  // }
+  function handleSearchClick() {
+    books.filter((book) => book.includes(searchTerm));
+  }
 
   return (
     <>
@@ -27,7 +28,10 @@ export default function HomePage({ books }) {
         <h1>Book Hunting</h1>
       </header>
       <main>
-        <SearchBar setSearchTerm={setSearchTerm} />
+        <SearchBar
+          setSearchTerm={setSearchTerm}
+          handleSearchClick={() => handleSearchClick()}
+        />
         {/* <button type="button" onClick={handleToggleFilterModal}>
           Enter
         </button> */}
