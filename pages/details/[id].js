@@ -22,7 +22,7 @@ export default function bookDetailPage({ books }) {
       <header>{title}</header>
       <main>
         <Image alt={title} height={100} width={70} src={cover} />
-        <p>author: {author}</p>
+        <p>{author}</p>
         <p>year: {publishYear}</p>
         <p>pages: {pages}</p>
         <p>genre: {genre}</p>
