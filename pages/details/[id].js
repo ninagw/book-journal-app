@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
 
-export default function bookDetailPage({ books }) {
+export default function BookDetailPage({ books }) {
   console.log("BOOKS: ", books);
 
   const router = useRouter();
