@@ -1,7 +1,6 @@
-import react, { useState } from "react";
+import { useState } from "react";
 import BookList from "@/components/BookList";
 import SearchBar from "@/components/Searchbar";
-import bookDetailPage from "./details/[id]";
 
 export default function HomePage({ books }) {
   const [searchTerm, setSearchTerm] = useState("");

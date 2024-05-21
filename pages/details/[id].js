@@ -8,6 +8,8 @@ export default function BookDetailPage({ books }) {
   const { id } = router.query;
 
   const currentBook = books.find((book) => book.id === id);
+  console.log("BOOK_ID: ", book.id);
+  console.log("ID: ", id);
   console.log("CURRENTBOOK: ", currentBook);
 
   if (!currentBook) {
