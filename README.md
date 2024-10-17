@@ -1,6 +1,6 @@
 # Book Journal App
 
-Project loading...
+Project loading..
 
 ## Scribble
 
